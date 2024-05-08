@@ -7,6 +7,16 @@ function App() {
 
   let [counter, setCounter] = useState(0)
   // let counter = 15
+
+  let addToggler;
+  let removeToggler;
+    if(counter === 0){
+      addToggler = false
+      removeToggler = true
+    }else if(counter >= 0){
+      removeToggler = false
+    }
+
   let addValue = ()=>{
   console.log("Before Add Value",counter)
   // counter = counter + 1
@@ -29,9 +39,9 @@ function App() {
       <br />
       
       <h2>Counter Value : {counter}</h2>
-      <button onClick={addValue}>Add Value</button>
+      <button disabled = {addToggler} onClick={addValue}>Add Value</button>
       <br />
-      <button onClick={removeValue}>Remove Value</button>
+      <button disabled = {removeToggler} onClick={removeValue}>Remove Value</button>
 
     </>
   )
