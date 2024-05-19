@@ -5,7 +5,9 @@ const [color,setColor] = useState("#212121")
   return (
 
     <div className='w-full h-screen duration-150' style={{backgroundColor:color}}>
-
+      <div className='mx-0 p-3 bg-gray-900 text-white text-2xl'>
+        <a href="https://akshutam-portfolio.vercel.app/">Akshutam.dev</a>
+      </div>
 
         <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
           <div className='flex flex-wrap justify-center gap-3 bg-white px-3 py-2 rounded-2xl shadow-lg border border-1 border-gray-500 text-lg'>
